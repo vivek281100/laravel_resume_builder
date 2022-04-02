@@ -6,10 +6,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\controllers\calculater;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front');
 });
 
-Route::view("marks",'marks');
+Route::view("/about",'menus.about');
+Route::view("/home",'menus.home');
+Route::view("/service",'menus.service');
 Route::post("marks",[calculater::class,'cal']);
 
 //-------------------------------------------------------------------------

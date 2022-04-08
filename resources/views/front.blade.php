@@ -1,8 +1,13 @@
-<!Doctype HTML>
-<html>
+@extends('menus.app')
+@section('content')
 <head>
-{{ URL::asset('css/front.css'); }} 
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>get your self , a resume now.</h1>
+    <div class='main'>
+       <h1>A resume now.</h1>
+       <button><a href="/login">Login</a></button>
+       <button><a href="/resumepage1">Resume</a></button>
+    </div>
 </body>
+@endsection

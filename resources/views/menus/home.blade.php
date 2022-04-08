@@ -1,4 +1,4 @@
-@extends('menus.app');
+@extends('menus.app')
 @section('title')
 Home page
 @endsection

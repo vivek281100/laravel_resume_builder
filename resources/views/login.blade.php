@@ -1,3 +1,6 @@
+@extends('menus.app')
+@section('content')
+<div class='login'>
 <h1> LOGIN </h1>
 <form action="user" method="POST">
     @csrf
@@ -9,3 +12,5 @@
     <br>
     <button type="submit"> Login</button>
 </form>
+</div>
+@endsection

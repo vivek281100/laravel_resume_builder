@@ -1,23 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\anuthentication;
-//use App\Http\controllers\uploadfile;
-use App\Http\controllers\calculater;
+use App\Http\Controllers\ResumedetailsController;
 
 Route::get('/', function () {
-    return view('front');
+    return view('Main');
 });
-
+Route::get('/home', 'HomeController@index')->name('home');
 Route::view("/about",'menus.about');
-Route::view("/home",'menus.home');
+Route::view("/home",'Main');
+Auth::routes();
 Route::view("/service",'menus.service');
-Route::view("/login","login");
-Route::post("marks",[calculater::class,'cal']);
+Route::get("/Resume/resumepage1",[ResumedetailsController::class,'create']);
+Route::post("/Resume",[ResumedetailsController::class,'store']); 
+Route::get("education/resumepage2",[educationController::class,'create']);
 
-
-Route::post("user",[anuthentication::class,'userLogin']);
-Route::view('/profile','profile');
 //redirects to login if not logged in
 // Route::get('/profile', function () {
 //     if(session()->has('user'))
@@ -28,22 +25,6 @@ Route::view('/profile','profile');
 // });
 
 //prevents to go to login page if a session is active
-Route::get('/login', function () {
-    if(session()->has('user'))
-    {
-        return redirect('profile');
-    }
-    return view('login');
-});
-
-//closses a session and redirects to login.
-Route::get('/logout', function () {
-    if(session()->has('user'))
-    {
-        session()->pull('user');
-    }
-    return redirect('login');
-});
 //-----------------------------------------------------------------------------
 
 

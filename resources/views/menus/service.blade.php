@@ -4,6 +4,8 @@ service page
 @endsection
 
 @section('content')
-<h1>Welcome</h1>
-<p>asnc zl</p>
+<div class="services">
+    <h1>Services.</h1>
+    <p>We provide you a place to build your perfect Resume.</p>
+</div>
 @endsection

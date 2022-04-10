@@ -11,8 +11,8 @@ Route::view("/about",'menus.about');
 Route::view("/home",'Main');
 Auth::routes();
 Route::view("/service",'menus.service');
-Route::get("/Resume/resumepage1",[ResumedetailsController::class,'create']);
-Route::post("/Resume",[ResumedetailsController::class,'store']); 
+Route::get("/Resume/resumepage1",[ResumedetailsController::class,'create'])->middleware('auth');
+Route::post("/Resume",[ResumedetailsController::class,'store'])->middleware('auth'); 
 Route::get("education/resumepage2",[educationController::class,'create']);
 
 //redirects to login if not logged in

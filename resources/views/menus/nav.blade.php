@@ -8,6 +8,7 @@
         <li><a href="/about">About</a></li>
         <li><a href="/service">services</a></li>
         <li><a href="/Resume/resumepage1">Resume</a></li>
+        <li><a href="/register">Register</a></li>
         <li><a href="/login">Log-in</a></li>
     </ul>
 </div>

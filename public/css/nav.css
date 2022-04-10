@@ -17,7 +17,9 @@ ul {
   li:last-child{
       float:right;
   }
-  
+  li:nth-last-child(2){
+    float: right;
+  }
   li a {
     display: block;
     color: white;
